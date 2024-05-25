@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Rent Agreement</title>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                margin: 0;
+                font-family: Arial, sans-serif;
+            }
+
+            main {
+                max-width: 800px;
+                padding: 20px;
+                border: 1px solid #ccc;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+
+            h1 {
+                text-align: center;
+                font-weight: bold;
+            }
+
+            p {
+                margin: 0 0 15px;
+                line-height: 1.5;
+                word-wrap: break-word;
+                max-width: 100%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <main>
+            <h1>RENT AGREEMENT</h1>
+            <p>
+                This Rent Agreement is made on this <%= formattedDate %> (date of rent
+                agreement) by <%= nameOfLandlord  %> (name of the landlord) S/o
+                <%= fatherName %> (father&rsquo;s name of the landlord), Add:
+                <%= address %> (residential address of the landlord). Herein
+                after called the Lessor / Owner, Party Of the first part AND
+                <%= nameOfTenant %> (Name of the proposed company), through its
+                proposeddirector <%= nameOfTenant %> (name of the director)
+                called Lessee/Tenant, Party of the Second Part<br />
+                That the expression of the term , Lessor/Owner and the
+                Lessee/Tenant Shall mean and include their legal heirs
+                successors , assigns , representative etc. Whereas the Lessor
+                /Owner is the owner and in possession of the property No:
+                <%= propertyNumber %> (registered address of the company) and has
+                agreed to let out the one office Room, one Toilet &amp; Bathroom
+                Set on said property, to the Lessee/Tenant and the Lessee/Tenant
+                has agreed to take the same on rent of Rs. <%= rent %>/- (In INR)
+                per month.<br />
+                <br /><br />NOW THIS RENT AGREEMENT WITNESSETH AS UNDER:-<br /><br />
+                1. That the Tenant/Lessee shall pay as the monthly rent of
+                RS.<br />
+                <%= rent %>/- (In INR) per month, excluding electricity and water
+                charge.<br /><br />
+                2. That the Tenant /Lessee shall not sub&ndash;let any part of
+                the above said demised premised premises to anyone else under
+                any circumstances without the consent of Owner.<br /><br />
+                3. That the Tenant / Lessee shall abide by all the bye - laws ,
+                rules and regulation, of the local authorities in respect of the
+                demised premises and shall not do any illegal activities in the
+                said demised premises.<br /><br />
+                4. That this Lease is granted for a period of Eleven (11) months
+                only commencing from<br />
+                <%= dateOfCommencement %> (date of rent commencing from) and this
+                lease can be extended further<br /><br />
+                by both the parties with their mutual consent on the basis of
+                prevailing rental value<br />
+                in the market .<br /><br />
+                5. That the Lessee shall pay Electricity &amp; Water charge as
+                per the proportionate consumption<br />
+                of the meter to the Lessor /Owner.<br /><br />
+                6. That the Tenant/Lessee shall not be entitled to make
+                structure in the rented premises except<br />
+                the installation of temporary decoration, wooden partition/
+                cabin, air &ndash; conditioners etc.<br />
+                without the prior consent of the owner.<br /><br />
+                7. That the Tenant/lessee can neither make addition/alteration
+                in the said premises<br />
+                without the written consent of the owner, nor the lessee can
+                sublet part or entire<br />
+                premises to any person(s)/firm(s)/company(s).<br />
+                Contd: 2/-<br /><br />
+                8. That the Tenant/Lessee shall permit the Lessor/Owner or his
+                Authorized agent to enter<br />
+                in to the said tenanted premises for inspection/general checking
+                or to carry out the<br />
+                repair work, at any reasonable time.<br /><br />
+                9. That the Tenant/Lessee shall keep the said premises in clean
+                &amp; hygienic condition and shall<br />
+                not do or causes to be done any act which may be a nuisance to
+                other.<br /><br />
+                10. That the Tenant/Lessees shall carry on all day to day minor
+                repairs at his/her own cost.<br /><br />
+                11. That this Agreement may be terminated before the expiry of
+                this tenancy period by<br />
+                serving One month prior notice by either party for this
+                intention .<br /><br />
+                12. That the Lessee shall use the above said premises for
+                Official Purpose Only.<br /><br />
+                13. That the Lessee/Tenant Shall not store/Keep any offensive,
+                dangerous, explosive or highly<br />
+                Inflammable articles in the said premises and shall not use the
+                same for any unlawful<br />
+                activities .<br /><br />
+                14. That the Lessee shall pay the one month&rsquo;s advance rent
+                to the Lessor the same shall be adjusted in<br />
+                monthly rent.<br /><br />
+                15. That both the parties have read over and understood all the
+                contents of this agreement and<br />
+                have signed the same without any force or pressure from any
+                side.<br />
+                In WITNESS WHEREOF the lessor/Owner and the Tenant / Lessee have
+                hereunto subscribed their<br />
+                hand at<br />
+                <%= place %> (place) on this the<br />
+                <%= formattedDate %> (date of rent agreement) year first above<br />
+                Mentioned in presents of the following Witnesses<br />
+                WITNESSES:-<br />
+                1.<br />
+                2.<br />
+                <%= nameOfLandlord %> (name of the landlord)
+                <%= nameOfTenant %> (name of the proposed<br />
+                Company)
+            </p>
+        </main>
+    </body>
+</html>
