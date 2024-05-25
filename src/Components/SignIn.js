@@ -8,6 +8,10 @@ export default function SignIn() {
     const [value, setValue] = useState('');
     const [redirect, setRedirect] = useState(false);
 
+    // const [fullName, setFullName] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
     const handleClick = async () => {
         try {
             const result = await signInWithPopup(auth, provider);
@@ -17,6 +21,27 @@ export default function SignIn() {
             setRedirect(true);
         } catch (error) {
             console.error(error);
+        }
+    };
+
+    const onFormSubmit = async e => {
+        e.preventDefault();
+
+        const res = await fetch("http://localhost:8000/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                email,
+                password
+            })
+        });
+        
+        if (res.status === 200) {
+            console.log("Authentication Successfull!");
+            const json = await res.json();
+            console.log(json);
         }
     };
 
@@ -56,6 +81,8 @@ export default function SignIn() {
                                     name="email"
                                     type="email"
                                     autoComplete="email"
+                                    value={email}
+                                    onChange={e => setEmail(e.target.value)}
                                     required
                                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                 />
@@ -79,6 +106,8 @@ export default function SignIn() {
                                     name="password"
                                     type="password"
                                     autoComplete="current-password"
+                                    value={password}
+                                    onChange={e => setPassword(e.target.value)}
                                     required
                                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                 />
@@ -87,7 +116,8 @@ export default function SignIn() {
 
                         <div>
                             <button
-                                type="submit"
+                                type="button"
+                                onClick={onFormSubmit}
                                 className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                             >
                                 Sign in
