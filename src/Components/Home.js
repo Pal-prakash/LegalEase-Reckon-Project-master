@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Dialog } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import {ExpertConsultation} from "./ExpertConsultation";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import {ChatWithBot} from "./ChatWithBot";
-import {GenerateLegalDocuments} from "./GenerateLegalDocuments";
+// import {ExpertConsultation} from "./ExpertConsultation";
+import { /*BrowserRouter as Router, Route, Routes,*/ Link } from "react-router-dom";
+// import {ChatWithBot} from "./ChatWithBot";
+// import {GenerateLegalDocuments} from "./GenerateLegalDocuments";
 
 const navigation = [
   { name: "Expert Consultation", href: "/expertconsultation" },
@@ -202,7 +202,7 @@ export default function About() {
                      </Link>
                     </div>
                        
-                       <p class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-opacity-100">Use our bot to simplify, summarize any case file,proceedings that may have language that is difficult for non-lawyers to understand.</p>
+                       <p className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-opacity-100">Use our bot to simplify, summarize any case file,proceedings that may have language that is difficult for non-lawyers to understand.</p>
                     </div>
 
                     

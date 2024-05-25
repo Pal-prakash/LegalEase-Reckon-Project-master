@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Dialog } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import { ExpertConsultation } from "./ExpertConsultation";
-import { ChatWithBot } from "./ChatWithBot";
-import GenerateLegalDocuments from "./GenerateLegalDocuments";
+import { /*BrowserRouter as Router, Route, Routes,*/ Link } from "react-router-dom";
+// import { ExpertConsultation } from "./ExpertConsultation";
+// import { ChatWithBot } from "./ChatWithBot";
+// import GenerateLegalDocuments from "./GenerateLegalDocuments";
 
 const navigation = [
     { name: 'Expert Consultation', href: '/expertconsultation' },

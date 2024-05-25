@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { /*BrowserRouter as Router,*/ Link } from "react-router-dom";
 
 const navigation = [
   { name: "Expert Consultation", href: "/expertconsultation" },
@@ -28,7 +28,7 @@ const lawyersData = [
     price: "180/hour",
   },
   {
-    id: 2,
+    id: 3,
     imageSrc: "https://th.bing.com/th/id/OIP.ISnWtTDkbUUo3bZ2WrO46gHaFc?rs=1&pid=ImgDetMain",
     description:
       "Specialized in Divorce Law. Offers consultation on contract drafting, business agreements, and legal disputes.",
@@ -36,7 +36,7 @@ const lawyersData = [
     price: "180/hour",
   },
   {
-    id: 2,
+    id: 4,
     imageSrc: "../sample1.jpeg",
     description:
       "Specialized in Business Law. Offers consultation on contract drafting, business agreements, and legal disputes.",
@@ -164,6 +164,7 @@ export function ExpertConsultation() {
                   <img
                     className="mx-auto mb-4 h-40 w-64 rounded-full"
                     src={lawyer.imageSrc}
+                    alt={lawyer.specialty}
                    
                   />
                   <p className="text-lg font-semibold">{lawyer.specialty}</p>

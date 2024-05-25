@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Dialog } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import {ExpertConsultation} from "./ExpertConsultation";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import {ChatWithBot} from "./ChatWithBot";
-import {GenerateLegalDocuments} from "./GenerateLegalDocuments";
-import InputFields1 from "./InputFields1";
+// import {ExpertConsultation} from "./ExpertConsultation";
+import { /*BrowserRouter as Router, Route, Routes,*/ Link } from "react-router-dom";
+// import {ChatWithBot} from "./ChatWithBot";
+// import {GenerateLegalDocuments} from "./GenerateLegalDocuments";
+// import InputFields1 from "./InputFields1";
 import html2pdf from 'html2pdf.js';
 import { Document, Page } from 'react-pdf';
 
