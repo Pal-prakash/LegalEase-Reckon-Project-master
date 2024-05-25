@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Dialog } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import {ExpertConsultation} from "./ExpertConsultation";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import {ChatWithBot} from "./ChatWithBot";
-import {GenerateLegalDocuments} from "./GenerateLegalDocuments";
-import InputFields1 from "./InputFields1";
+// import {ExpertConsultation} from "./ExpertConsultation";
+import { /*BrowserRouter as Router, Route, Routes,*/ Link } from "react-router-dom";
+// import {ChatWithBot} from "./ChatWithBot";
+// import {GenerateLegalDocuments} from "./GenerateLegalDocuments";
+// import InputFields1 from "./InputFields1";
 import html2pdf from 'html2pdf.js';
 import { Document, Page } from 'react-pdf';
 
@@ -40,10 +40,9 @@ const MyFormComponent = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post('https://0:8000/leagal/generate-pdf/', formData)
+        axios.post('http://localhost:8000/generate/rent', formData)
             .then(response => {
                 console.log('Form submission successful:', response.data);
-                
                 // Optionally, update UI based on the response
             })
             .catch(error => {
@@ -54,7 +53,7 @@ const MyFormComponent = () => {
     
     const handleDownloadPDF = () => {
         // Use axios to get the HTML content from the server
-        axios.post('https://0:8000/leagal/generate-pdf/', formData)
+        axios.post('http://localhost:8000/generate/rent', formData)
             .then(response => {
                 // Create a new HTML element with the received HTML content
                 const tempDiv = document.createElement('div');
@@ -80,7 +79,7 @@ const MyFormComponent = () => {
     const [previewUrl, setPreviewUrl] = useState('');
 
     const handlePreviewPDF = () => {
-        axios.post('https://0:8000/leagal/generate-pdf/', formData)
+        axios.post('http://localhost:8000/generate/rent', formData)
             .then(response => {
                 // Assuming the server returns a URL or link to the generated PDF file
                 const pdfUrl = response.data.url;
