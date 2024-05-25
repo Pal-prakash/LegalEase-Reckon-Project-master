@@ -7,9 +7,10 @@ import {ChatWithBot} from "./ChatWithBot";
 import {GenerateLegalDocuments} from "./GenerateLegalDocuments";
 
 const navigation = [
-    { name: 'Expert Consultation', href: '/expertconsultation' },
-    { name: 'Generate Legal Documents', href: '/GenerateLegalDocuments' },
-    { name: 'Document Storage', href: '/documentstorage' },
+  { name: "Expert Consultation", href: "/expertconsultation" },
+  { name: "Generate Legal Documents", href: "/GenerateLegalDocuments" },
+  { name: "Chat with Bot", href: "/chatwithbot" },
+  { name: "Document Storage", href: "/documentstorage" },
 ];
 
 export default function About() {
@@ -61,6 +62,7 @@ export default function About() {
                             Log in <span aria-hidden="true">&rarr;</span>
                         </Link>
                     </div>
+                    
                 </nav>
                 <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={() => setMobileMenuOpen(false)}>
                     <div className="fixed inset-0 z-50" />
