@@ -9,6 +9,7 @@ const DocumentStorage = () => {
   const [error, setError] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [file, setFile] = useState(null);
+  const [imgUrl,setImgUrl] = useState('');
 
   const navigation = [
     { name: "Expert Consultation", href: "/expertconsultation" },
@@ -60,6 +61,7 @@ const DocumentStorage = () => {
       const json = await res.json();
       console.log(json)
       console.log(`https://coral-adverse-dove-941.mypinata.cloud/ipfs/${json.IpfsHash}`);
+      setImgUrl(`https://coral-adverse-dove-941.mypinata.cloud/ipfs/${json.IpfsHash}`);
     } catch (err) {
       console.log(err);
     }
@@ -205,6 +207,9 @@ const DocumentStorage = () => {
           >
             Upload
           </button>
+       
+          { imgUrl ?  <div>your Ipfs stored img url: {imgUrl}</div> : <div></div> }
+        
         </div>
 
         {/* <input className="" type="file" onChange={onFileChange} /> */}
