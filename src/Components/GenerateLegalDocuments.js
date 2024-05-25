@@ -7,10 +7,11 @@ import { ChatWithBot } from "./ChatWithBot";
 import GenerateLegalDocuments from "./GenerateLegalDocuments";
 
 const navigation = [
-    { name: 'Expert Consultation', href: '/expertconsultation' },
-    { name: 'Generate Legal Documents', href: '/GenerateLegalDocuments' },
-    { name: 'Chat with Bot', href: '/chatwithbot' },
-    { name: 'Document Storage', href: '/documentstorage' },
+  { name: "Expert Consultation", href: "/expertconsultation" },
+  { name: "Generate Legal Documents", href: "/GenerateLegalDocuments" },
+  { name: "Chat with Bot", href: "/chatwithbot" },
+  { name: "Document Storage", href: "/documentstorage" },
+  { name: "StoreToBlockchain", href: "/storeToETH" },
 ];
 
 const boxInfo = [

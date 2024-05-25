@@ -11,6 +11,7 @@ const navigation = [
   { name: "Generate Legal Documents", href: "/GenerateLegalDocuments" },
   { name: "Chat with Bot", href: "/chatwithbot" },
   { name: "Document Storage", href: "/documentstorage" },
+  { name: "StoreToBlockchain", href: "/storeToETH" },
 ];
 
 export default function About() {

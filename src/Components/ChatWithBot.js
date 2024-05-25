@@ -10,6 +10,7 @@ const StreamlitEmbed = () => {
     { name: "Generate Legal Documents", href: "/GenerateLegalDocuments" },
     { name: "Chat with Bot", href: "/chatwithbot" },
     { name: "Document Storage", href: "/documentstorage" },
+    { name: "StoreToBlockchain", href: "/storeToETH" },
   ];
 
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
