@@ -4,10 +4,10 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 
 const navigation = [
-  { name: 'Expert Consultation', href: '/expertconsultation' },
-  { name: 'Generate Legal Documents', href: '/GenerateLegalDocuments' },
-  { name: 'Chat with Bot', href: '/chatwithbot' },
-  { name: 'Translate Document', href: '/translatedocument' },
+  { name: "Expert Consultation", href: "/expertconsultation" },
+  { name: "Generate Legal Documents", href: "/GenerateLegalDocuments" },
+  { name: "Chat with Bot", href: "/chatwithbot" },
+  { name: "Document Storage", href: "/documentstorage" },
 ];
 
 const lawyersData = [
