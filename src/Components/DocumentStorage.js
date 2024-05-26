@@ -63,6 +63,10 @@ const DocumentStorage = () => {
     }
   }
 
+  const handleCopy = (e) => {
+    navigator.clipboard.writeText(imgUrl);
+  };
+
   return (
     <div className="bg-indigo-200">
       <header className=" inset-x-0 top-0 z-50">
@@ -180,8 +184,8 @@ const DocumentStorage = () => {
                 />
               </svg>
               <p className="mb-2 text-sm text-gray-500 dark:text-gray-400">
-                <span className="font-semibold">Click to upload</span> or drag and
-                drop
+                <span className="font-semibold">Click to upload</span> or drag
+                and drop
               </p>
               <p className="text-xs text-gray-500 dark:text-gray-400">
                 SVG, PNG, JPG or GIF (MAX. 800x400px)
@@ -213,6 +217,7 @@ const DocumentStorage = () => {
                 {imgUrl}
               </div>
             </a>
+            <button onClick={handleCopy}>Copy</button>
           </div>
         ) : (
           <div></div>
