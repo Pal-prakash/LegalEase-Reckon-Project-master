@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { contractAddress, contractABI } from "../config";
+// import  manta  from "../../public/manta3.png"
 import { ethers } from "ethers";
 
 import { Web3Context } from "../context/web3context";
@@ -139,15 +140,32 @@ params ? setValue(params) : setValue('');
       </header>
       <div className="mx-auto w-1/2">
         <h3 className="mb-4 mt-24 text-2xl font-semibold">
-          Interact with Contract
+          Store your <span className="text-gray-600">Legal doument</span> on
+          BlockChain
         </h3>
-        <p className="my-5">Account: {account}</p>
+        <p className="my-4">
+          <span className="text-gray-700 font-semibold my-2">
+            {" "}
+            &bull; Power to the People
+          </span>
+          : Decentralization means no single authority controls your
+          documents—empowering you like never before!
+        </p>
+        <p className="my-4">
+          <span className="text-gray-700 font-semibold">
+            {" "}
+            &bull; Bulletproof Protection
+          </span>
+          : Blockchain's immutable nature shields documents from accidental
+          damage, ensuring perpetual integrity.
+        </p>
+        <p className="mb-7 mt-14"><img className="w-[40px] inline" src={"../metamask.png"}/><span className="font-semibold m-2">Account:</span> {account}</p>
         <div className=" flex">
           <input
             className="flex grow h-10 rounded-md border border-black/30 bg-transparent px-3 py-2 text-sm placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-black/30 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
             value={value}
             onChange={(e) => setValue(e.target.value)}
-            placeholder="enter Img Url"
+            placeholder="Enter Image Url"
           />
           <button
             onClick={interactWithContract}
@@ -156,6 +174,7 @@ params ? setValue(params) : setValue('');
             Store to BlockChain
           </button>
         </div>
+          <img className="w-[50px] m-auto mt-20" src={"../manta3.png"} />
       </div>
       <footer className="bg-indigo-200 text-black py-12 mt-20">
         <div className="container mx-auto flex flex-col items-center">
