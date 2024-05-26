@@ -27,7 +27,7 @@ export default function SignIn() {
     const onFormSubmit = async e => {
         e.preventDefault();
 
-        const res = await fetch("http://localhost:8000/login", {
+        const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/login`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

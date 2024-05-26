@@ -40,7 +40,7 @@ const MyFormComponent = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:8000/generate/rent', formData)
+        axios.post(`${process.env.REACT_APP_BACKEND_URL}/generate/rent`, formData)
             .then(response => {
                 console.log('Form submission successful:', response.data);
                 // Optionally, update UI based on the response
@@ -53,7 +53,7 @@ const MyFormComponent = () => {
     
     const handleDownloadPDF = () => {
         // Use axios to get the HTML content from the server
-        axios.post('http://localhost:8000/generate/rent', formData)
+        axios.post(`${process.env.REACT_APP_BACKEND_URL}/generate/rent`, formData)
             .then(response => {
                 // Create a new HTML element with the received HTML content
                 const tempDiv = document.createElement('div');
@@ -79,7 +79,7 @@ const MyFormComponent = () => {
     const [previewUrl, setPreviewUrl] = useState('');
 
     const handlePreviewPDF = () => {
-        axios.post('http://localhost:8000/generate/rent', formData)
+        axios.post(`${process.env.REACT_APP_BACKEND_URL}/generate/rent`, formData)
             .then(response => {
                 // Assuming the server returns a URL or link to the generated PDF file
                 const pdfUrl = response.data.url;
