@@ -1,5 +1,8 @@
 # LegalEase Documentation
-# https://www.canva.com/design/DAGGOGGVpbc/yautrDQHalf4EEqQ5gDGbQ/edit?utm_content=DAGGOGGVpbc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+## Deployed Project:
+## https://legal-ease-reckon-project-master.vercel.app/
+## Presentation
+### https://www.canva.com/design/DAGGOGGVpbc/yautrDQHalf4EEqQ5gDGbQ/edit?utm_content=DAGGOGGVpbc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 Simplify legal documentation and giving access to the basic right of justice to every citizen on their fingertips.
 ## 🎯 Objective
 Develop an AI-driven legal aids platform to automate document drafting, secure legal document storage using Manta Blockchain and much more..
