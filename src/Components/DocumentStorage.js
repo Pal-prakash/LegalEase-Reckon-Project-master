@@ -194,6 +194,7 @@ const DocumentStorage = () => {
             <input
               onChange={onFileChange}
               id="dropzone-file"
+              accept = ".jpg, .jpeg, .png"
               type="file"
               className="hidden"
             />
@@ -218,6 +219,11 @@ const DocumentStorage = () => {
               </div>
             </a>
             <button onClick={handleCopy}>Copy</button>
+            <div>
+              <Link to={`/storeToETH?link=${encodeURI(imgUrl)}`}>
+                Upload directly to the blockchain
+              </Link>
+            </div>
           </div>
         ) : (
           <div></div>
