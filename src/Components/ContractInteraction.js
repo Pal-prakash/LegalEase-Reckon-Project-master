@@ -1,9 +1,9 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { contractAddress, contractABI } from "../config";
 import { ethers } from "ethers";
 
 import { Web3Context } from "../context/web3context";
-import { Link } from "react-router-dom";
+import { Link, useParams, useSearchParams } from "react-router-dom";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 // Web3Co
@@ -19,7 +19,15 @@ const ContractInteraction = () => {
     { name: "StoreToBlockchain", href: "/storeToETH" },
   ];
 
+  useEffect(()=>{
+params ? setValue(params) : setValue('');
+  },[])
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const params = useSearchParams()[0].get("link");
+  // console.log(params.get("link"));
+  console.log(params);
 
   const interactWithContract = async () => {
     if (!signer) return;
@@ -130,11 +138,14 @@ const ContractInteraction = () => {
         </Dialog>
       </header>
       <div className="mx-auto w-1/2">
-        <h3 className="mb-4 mt-24 text-2xl font-semibold">Interact with Contract</h3>
+        <h3 className="mb-4 mt-24 text-2xl font-semibold">
+          Interact with Contract
+        </h3>
         <p className="my-5">Account: {account}</p>
         <div className=" flex">
           <input
             className="flex grow h-10 rounded-md border border-black/30 bg-transparent px-3 py-2 text-sm placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-black/30 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
+            value={value}
             onChange={(e) => setValue(e.target.value)}
             placeholder="enter Img Url"
           />
