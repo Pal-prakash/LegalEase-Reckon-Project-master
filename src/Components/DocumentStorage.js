@@ -9,7 +9,7 @@ const DocumentStorage = () => {
   const [error, setError] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [file, setFile] = useState(null);
-  const [imgUrl,setImgUrl] = useState('');
+  const [imgUrl, setImgUrl] = useState("");
 
   const navigation = [
     { name: "Expert Consultation", href: "/expertconsultation" },
@@ -59,16 +59,20 @@ const DocumentStorage = () => {
       );
       console.log(res);
       const json = await res.json();
-      console.log(json)
-      console.log(`https://coral-adverse-dove-941.mypinata.cloud/ipfs/${json.IpfsHash}`);
-      setImgUrl(`https://coral-adverse-dove-941.mypinata.cloud/ipfs/${json.IpfsHash}`);
+      console.log(json);
+      console.log(
+        `https://coral-adverse-dove-941.mypinata.cloud/ipfs/${json.IpfsHash}`
+      );
+      setImgUrl(
+        `https://coral-adverse-dove-941.mypinata.cloud/ipfs/${json.IpfsHash}`
+      );
     } catch (err) {
       console.log(err);
     }
   }
 
   return (
-    <div className="bg-indigo-200 h-screen">
+    <div className="bg-indigo-200">
       <header className=" inset-x-0 top-0 z-50">
         <nav
           className="flex items-center justify-between p-0 lg:px-8"
@@ -207,14 +211,22 @@ const DocumentStorage = () => {
           >
             Upload
           </button>
-       
-          { imgUrl ?  <div>your Ipfs stored img url: {imgUrl}</div> : <div></div> }
-        
         </div>
-
+        {imgUrl ? (
+          <div className="w-1/2 bg-indigo-200 m-auto my-8 flex flex-col justify-center items-center">
+            <span>Your Ipfs stored document-image-url</span>
+            <div className="my-2 font-bold">↓</div>
+            <a className="font-semibold" href={imgUrl}>
+              <div className="overflow-auto" style={{ scrollbarWidth: "0px" }}>
+                {imgUrl}
+              </div>
+            </a>
+          </div>
+        ) : (
+          <div></div>
+        )}
         {/* <input className="" type="file" onChange={onFileChange} /> */}
       </div>
-
       <footer className="bg-indigo-200 text-black py-12 mt-20">
         <div className="container mx-auto flex flex-col items-center">
           <div className="mb-6 text-center">
